@@ -1,10 +1,11 @@
 from random import *
 from turtle import *
 from freegames import path
+
 #Imports the image
 car = path('car.gif')
 #Establishes the number of tiles
-tiles = list(range(32)) * 2
+tiles = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '#', '@', '$', '!', '%', '?'] * 2
 state = {'mark': None}
 hide = [True] * 64
 #Establishes the two global counters
@@ -72,7 +73,7 @@ def draw():
     if mark is not None and hide[mark]:
         x, y = xy(mark)
         up()
-        goto(x + 25, y + 8)
+        goto(x + 27, y + 5)
         color('black')
         write(tiles[mark], align = "center", font=('Arial', 30, 'normal'))
 
